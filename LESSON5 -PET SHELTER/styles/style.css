@@ -1,0 +1,153 @@
+body {
+    background-color:rgb(140, 140, 140);
+}
+nav {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navbar-brand {
+    animation-name: rotate;  
+    animation-duration: 4s;  
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes rotate {
+    from {transform:rotateY(45deg);}
+    to {transform:rotateY(-45deg);}
+  }
+.navbar-brand img {
+    height: 90px;
+}
+
+.nav-link {
+    color: white !important;
+    margin: 40px;
+}
+.fa-bars {
+    font-size: 2.5rem;
+    color: white;
+}
+main {
+    height: 100vh;
+    background-image: url('../images/dog-friend.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.overlay   {
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 100px;
+}
+.overlay div {
+    width: 60%;
+}
+.overlay h1 {
+    font-size: 3rem;
+}
+.overlay p {
+    font-size: 1.1rem;
+}
+
+/* adoption css */
+.dummy {
+    height: 120px;
+}
+.enquiry-box {
+    height: 75px;
+    width: 75px;
+    /* background-color: chocolate; */
+    background-image: url('../images/paw-01.png');
+    background-size: cover;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    from {background-image: url('../images/paw-01.png');}
+    to {background-image: url('../images/paw-02.png');}
+}
+
+.listing-frame {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.listing-frame img{
+    width: 100%;
+}
+.listing-frame>div:nth-child(2){
+    flex: 1;
+}
+/* button styling */
+.row-btn {
+    /* as a parent  */
+    display: flex;
+}
+.frame-btn {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+    /* border: 1px solid  black; */
+    flex:1
+}
+.btn-info {
+    background-color: rgb(89, 89, 94);
+}
+.btn-info:hover {
+    background-color: rgb(57, 142, 208);
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+}
+.btn-adopt {
+    background-color: rgb(170, 169, 165);
+}
+.btn-adopt:hover {
+    background-color: rgb(228, 182, 66);
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+}
+.btn-donate {
+    background-color: rgb(217, 220, 214);
+}
+.btn-donate:hover {
+    background-color: rgb(126, 198, 55);
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+}
+
+@media screen and (min-width: 900px) {
+
+    .navbar-nav{
+        margin-top: 50px;
+    }
+    .nav-link {
+        font-size: 1.4rem;
+        letter-spacing: 4px;
+    }
+
+    /* adoption css */
+    .dummy {
+        height: 200px;
+    }
+}
